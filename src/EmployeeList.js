@@ -3,6 +3,8 @@ import AddEmployeeForm from './AddEmployeeForm';
 import EditEmployeeForm from './EditEmployeeForm';
 import EmployeeDetails from './EmployeeDetails';
 import './EmployeeList.css';
+import SalaryPipe from './SalaryPipe'; // Import the SalaryPipe component
+import NameCasePipe from './NameCasePipe'; // Import the NameCasePipe component
 
 const getPosition = (age) => {
   return age > 40 ? 'Senior' : 'Junior';
@@ -79,12 +81,20 @@ const EmployeeList = () => {
           {employees.map((employee) => (
             <tr key={employee.id}>
               <td onClick={() => handleViewDetails(employee)}>{employee.id}</td>
-              <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.firstName} {employee.lastName}</td>
+              <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>
+                {/* Use NameCasePipe component to format names */}
+                <NameCasePipe name={employee.firstName} />
+                {' '}
+                <NameCasePipe name={employee.lastName} />
+              </td>
               <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.gender}</td>
               <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.age}</td>
               <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.department}</td>
               <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.position}</td>
-              <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>{employee.salary}</td>
+              <td onMouseEnter={highlightText} onMouseLeave={removeHighlight}>
+                {/* Use SalaryPipe component to format salary */}
+                <SalaryPipe salary={employee.salary} />
+              </td>
               <td>
                 <button className="edit-button" onClick={() => { setShowEditForm(true); setEditEmployee(employee); }}>Edit</button>
                 <button className="delete-button" onClick={() => handleDeleteEmployee(employee.id)}>Delete</button>

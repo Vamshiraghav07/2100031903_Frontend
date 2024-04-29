@@ -32,8 +32,8 @@ const Home = () => {
   return (
     <div style={styles.container}>
       <div style={styles.content}>
-        <h1 style={styles.title}>Welcome to the Home Page!</h1>
-        <p style={styles.paragraph}>This is the Home Component content.</p>
+        <h1 style={styles.title}>Welcome to the My Home Page!</h1>
+        <p style={styles.paragraph}>This is the Home.</p>
       </div>
     </div>
   );
