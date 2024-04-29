@@ -1,0 +1,80 @@
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th, .employee-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .edit-button, .delete-button, .add-button {
+    background-color: #af4c7c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover, .delete-button:hover, .add-button:hover {
+    background-color: #45a049;
+  }
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th, .employee-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for odd rows */
+  .employee-table tbody tr:nth-child(odd) {
+    background-color: #eb4949df;
+  }
+  
+  /* Style for even rows */
+  .employee-table tbody tr:nth-child(even) {
+    background-color: #a4cc2d;
+  }
+  
+  .employee-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .edit-button, .delete-button, .add-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover, .delete-button:hover, .add-button:hover {
+    background-color: #45a049;
+  }
+  .highlight {
+    background-color: yellow;
+  }
+  
